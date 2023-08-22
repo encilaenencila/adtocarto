@@ -3,14 +3,17 @@ import { Outlet } from "react-router-dom";
 import ProductContext from "./productcontext";
 import { addDecimals } from "../helper/helper";
 import PropTypes from "prop-types";
-
-
+import Swal from 'sweetalert2'
+    
 
 const CartContext = createContext();
 export function CartProvider({ children }) {
   const { filterCategoryBy } = useContext(ProductContext);
-
+  
   const [cart, setCart] = useState([]);
+
+
+  
   useEffect(() => {
     if(cart.length > 0){
       localStorage.setItem("adtocarto", JSON.stringify(cart));
@@ -70,7 +73,13 @@ export function CartProvider({ children }) {
     };
     const newCarts = [...cart, newCart];
     setCart(newCarts);
-    return 
+    return Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Added to Cart!',
+      showConfirmButton: false,
+      timer: 1500
+    })
   };
 
 
@@ -143,6 +152,7 @@ export function CartProvider({ children }) {
         perItemCount,
         perItemSubTotal,
         checkOutTotal,
+      
       }}
     >
       {children}

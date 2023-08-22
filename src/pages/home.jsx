@@ -4,9 +4,10 @@ import { category } from "../json/category";
 import { useContext} from "react";
 import Banner from "../component/banner";
 import Features from "../component/features";
+
 function Home () {
   const { handleCategory } = useContext(ProductContext);
-  
+ 
   return (
     <div className="home-container">
       <Banner/>
@@ -33,6 +34,7 @@ function Home () {
       </ul>
 
       <Features/>
+    
     </div>
   );
 }

@@ -10,7 +10,7 @@ function NavBar() {
     <nav>
       <ul className="nav-list">
         <li className="nav-toggle">
-          <GiHamburgerMenu className="global-icons" />
+          <GiHamburgerMenu className="global-icons" style={{color: "#fff"}} />
         </li>
         <li className="nav-brand">
           <Link to="/" className="brand-name">

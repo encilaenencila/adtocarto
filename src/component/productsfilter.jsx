@@ -1,4 +1,4 @@
-import { require } from "../helper/helper";
+
 import { category } from "../json/category";
 import ProductContext from "../context/productcontext";
 import { useContext, useRef } from "react";
@@ -28,7 +28,7 @@ function ProductFilter() {
                   className="filter-card-btn"
                   onClick={() => handleCategory(cat.category)}
                 >
-                  <img src={require(cat?.category)} className="filter-img" />
+                  <img src={cat.imgurl} className="filter-img" />
                   <small className="filter-name">{cat.name}</small>
                 </button>
               </li>
