@@ -16,17 +16,17 @@ import Cart from "./pages/cart";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route errorElement={<ErrorPage />}>
+    
       <Route element={<ProductProvider />}>
         <Route element={<CartProvider />}>
-          <Route element={<Rootlayout />}>
+          <Route element={<Rootlayout />} errorElement={<ErrorPage />}>
             <Route path="/" element={<Home />}/>
             <Route path='/products' element={<ProductList/>} />
             <Route path='/cart' element={<Cart />} /> 
           </Route>
         </Route>
       </Route>
-    </Route>
+    
   )
 );
 
