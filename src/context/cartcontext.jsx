@@ -78,10 +78,19 @@ export function CartProvider({ children }) {
       icon: 'success',
       title: 'Added to Cart!',
       showConfirmButton: false,
-      timer: 1500
+      timer: 1000
     })
   };
 
+  // 
+  const increaseItemFromCartById = (id) => {
+    const newCart = {
+      id: id,
+    };
+    const newCarts = [...cart, newCart];
+    setCart(newCarts);
+    
+  };
 
   //subtracting id count from cart and localstorage
   const reduceItemFromCartById = (id) => {
@@ -148,6 +157,7 @@ export function CartProvider({ children }) {
         newCart,
         addToCart,
         removeFromCart,
+        increaseItemFromCartById,
         reduceItemFromCartById,
         perItemCount,
         perItemSubTotal,

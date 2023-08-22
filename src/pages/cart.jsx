@@ -8,6 +8,7 @@ function Cart() {
     newCart,
     addToCart,
     removeFromCart,
+    increaseItemFromCartById,
     reduceItemFromCartById,
     perItemCount,
     perItemSubTotal,
@@ -75,7 +76,7 @@ function Cart() {
                     type="button"
                     value="+"
                     className="cart-card-btn"
-                    onClick={() => addToCart(produce.id)}
+                    onClick={() => increaseItemFromCartById(produce.id)}
                   />
                 </div>
 
