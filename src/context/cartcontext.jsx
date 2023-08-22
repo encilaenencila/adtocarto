@@ -150,7 +150,7 @@ export function CartProvider({ children }) {
   const checkOutTotal = () => {
     let  total = newCart().map((crt) => perItemCount(crt.id) * crt.price );
     let newTotal = total.reduce(anyReducer)
-    return addDecimals(newTotal)
+    return addDecimals(Math.round(newTotal))
   };
   return (
     <CartContext.Provider
