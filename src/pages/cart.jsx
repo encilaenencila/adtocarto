@@ -6,7 +6,6 @@ function Cart() {
   const {
     cart,
     newCart,
-    addToCart,
     removeFromCart,
     increaseItemFromCartById,
     reduceItemFromCartById,

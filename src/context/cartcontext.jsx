@@ -77,6 +77,8 @@ export function CartProvider({ children }) {
       position: 'center',
       icon: 'success',
       title: 'Added to Cart!',
+      allowEscapeKey: false,
+      allowOutsideClick: false,
       showConfirmButton: false,
       timer: 1000
     })
